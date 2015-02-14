@@ -30,7 +30,7 @@ class MsgsController < ApplicationController
     if session[:my_msgs] && session[:my_msgs].include?(params[:id])
       @msg = Msg.find(params[:id])
     else
-      logger.debug "404!"
+      #logger.debug "404!"
       raise ActionController::RoutingError.new('Not Found')
     end
   end
