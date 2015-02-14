@@ -11,6 +11,10 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'ruby-msg'
+gem 'paperclip'
+gem 'foundation-rails'
+gem 'dropzonejs-rails'
+gem 'jquery-turbolinks'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -26,6 +30,11 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'annotate'
   gem 'meta_request'
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'rspec-rails'
+  gem 'spork'
+  gem 'growl'
 end
 
 group :production do
