@@ -16,16 +16,16 @@ gem 'foundation-rails'
 gem 'dropzonejs-rails'
 gem 'jquery-turbolinks'
 
-gem 'rspec-core'
-gem 'rspec-rails'
-gem 'rspec-expectations'
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
+
+  gem 'rspec-core'
+  gem 'rspec-rails'
+  gem 'rspec-expectations'
 
   gem 'spring'
   gem 'pry-rails'
