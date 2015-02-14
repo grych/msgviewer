@@ -32,6 +32,7 @@ group :development, :test do
   gem 'meta_request'
   gem 'guard'
   gem 'guard-rspec'
+  gem 'rspec'
   gem 'rspec-rails'
   gem 'spork'
   gem 'growl'
