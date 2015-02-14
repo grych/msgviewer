@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="small-12 columns">
+    <p class='panel medium'>
+      From: <%= @msg.from %><br>
+      To: <%= @msg.to %><br>
+      Subject: <%=@msg.subject %>
+    </p>
+    <p class='medium'>
+      <%= if @msg.html then raw(@msg.html) else @msg.text end %>
+    </p>
+    <% unless @msg.attachments.empty? %>
+      <p class='panel medium'>
+        Attachments:<br>
+        <% @msg.attachments.each_with_index do |attachment, index| %>
+          <%= link_to attachment.filename, "#{msg_path(@msg)}/#{index}" %><br>
+        <% end %>
+      </p>
+    <% end %>
+  </div>
+</div>

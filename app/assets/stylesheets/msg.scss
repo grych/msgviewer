@@ -1,0 +1,75 @@
+// Place all the styles related to the Msg controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background: #fff;
+}
+
+.center {
+  text-align: center;
+}
+
+p {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+p.big {
+  font: 14pt arial;
+}
+
+p.small {
+  color: #666;
+  font: 8pt arial;
+}
+
+p.medium {
+  font: 10pt arial;
+}
+
+.dropzone {
+  //position: relative;
+  border: 5px dotted #666;
+  border-radius: 20px;
+  color: black;
+  font: bold 24px/200px arial;
+  height: 200px;
+  margin: 30px auto;
+  text-align: center;
+  width: 300px;
+}
+
+.dropzone.hover {
+  border: 10px solid #FE5;
+  color: #FE5;
+}
+
+.dropzone.dropped {
+  background: #222;
+  border: 10px solid #444;
+}
+
+.dropzone div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.dropzone img {
+  border-radius: 10px;
+  vertical-align: middle;
+  max-width: 95%;
+  max-height: 95%;
+}
+
+.dropzone [type="file"] {
+  cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}

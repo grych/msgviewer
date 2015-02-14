@@ -1,0 +1,35 @@
+<%= javascript_include_tag "#{params[:controller]}/#{params[:action]}" %>
+
+<div class="row">
+  <div class="small-12 columns">
+    <p class='big center'>
+      Microsoft Outlook *.msg files online viewer.
+      <!-- <div class="dz-error-message"><span data-dz-errormessage></span></div> -->
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 colums">
+    <div data-alert class="alert-box alert radius" style="display: none;" id="error-alert">
+      <span id='error-alert-text'>Can't process this file!</span>
+      <a href="#" class="close">&times;</a>
+    </div>
+    <%= form_for(@msg, html: {class: 'dropzone'}) do |f| %>
+      <div>drag and drop here</div>
+      <div class="fallback">
+        <%= f.file_field :file %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 columns">
+    <p class="small center">
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    </p>
+    <p class="medium center">
+      &copy;2015 Tomek "Grych" Gryszkiewicz. <a href="mailto:grych@tg.pl?Subject=msgviewer">Contact the author</a>.
+    </p>
+  </div>
+</div>
+
