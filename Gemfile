@@ -35,6 +35,7 @@ group :development, :test do
   gem 'guard'
   gem 'guard-rspec'
   gem 'rspec-rails'
+  gem 'rspec-expectations'
   gem 'spork'
   gem 'growl'
 end

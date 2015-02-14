@@ -276,6 +276,7 @@ DEPENDENCIES
   puma
   rails (= 4.2.0)
   rspec-core
+  rspec-expectations
   rspec-rails
   ruby-msg
   sass-rails (~> 5.0)
