@@ -275,7 +275,7 @@ DEPENDENCIES
   pry-rails
   puma
   rails (= 4.2.0)
-  rspec
+  rspec-core
   rspec-rails
   ruby-msg
   sass-rails (~> 5.0)
