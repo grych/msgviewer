@@ -17,6 +17,8 @@ gem 'dropzonejs-rails'
 gem 'jquery-turbolinks'
 
 gem 'rspec-core'
+gem 'rspec-rails'
+gem 'rspec-expectations'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -34,8 +36,6 @@ group :development, :test do
   gem 'meta_request'
   gem 'guard'
   gem 'guard-rspec'
-  gem 'rspec-rails'
-  gem 'rspec-expectations'
   gem 'spork'
   gem 'growl'
 end
