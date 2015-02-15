@@ -1,4 +1,5 @@
 class MsgsController < ApplicationController
+  before_action :allowed_to_view, only: [:show, :view_attachment]
   def new
     session[:my_msgs] ||= []
     # housekeeping - delete old files in a background thread
@@ -27,12 +28,7 @@ class MsgsController < ApplicationController
   end
 
   def show
-    if session[:my_msgs] && session[:my_msgs].include?(params[:id])
-      @msg = Msg.find(params[:id])
-    else
-      #logger.debug "404!"
-      raise ActionController::RoutingError.new('Not Found')
-    end
+    @msg = Msg.find(params[:id])
   end
 
   def view_attachment
@@ -48,4 +44,8 @@ class MsgsController < ApplicationController
     render body: @attachment.data.read, content_type: content_type
   end
 
+  private
+  def allowed_to_view
+    raise ActionController::RoutingError.new('Not Found') unless session[:my_msgs] && session[:my_msgs].include?(params[:id])
+  end
 end
