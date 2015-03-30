@@ -3,12 +3,12 @@ class MsgsController < ApplicationController
   def new
     session[:my_msgs] ||= []
     # housekeeping - delete old files in a background thread
+    @msg = Msg.new
     background = Thread.new do
       destroyed = Msg.where('created_at < :before', before: Time.now-30.days).destroy_all.map {|x| x.id.to_s}
       session[:my_msgs] -= destroyed
       logger.info "Deleted old files: #{destroyed}"
     end
-    @msg = Msg.new
   end
 
   def create
@@ -41,7 +41,8 @@ class MsgsController < ApplicationController
     else
       'application/octet-stream'
     end
-    render body: @attachment.data.read, content_type: content_type
+    # render body: @attachment.data.read, content_type: content_type
+    send_data @attachment.data, type: content_type, filename: @attachment.filename
   end
 
   private
