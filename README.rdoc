@@ -1,28 +1,22 @@
-== README
+== MSGVIEVER
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Microsoft Outlook *.msg files online viewer.
 
-Things you may want to cover:
+== Installation
 
-* Ruby version
+As every Ruby on Rails software.
 
-* System dependencies
+== Online
 
-* Configuration
+https://msgviewer.tg.pl
 
-* Database creation
+== License & Legal
 
-* Database initialization
+MIT License
 
-* How to run the test suite
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-* Services (job queues, cache servers, search engines, etc.)
+== Author
 
-* Deployment instructions
+©2015 Tomek "Grych" Gryszkiewicz, grych@tg.pl
 
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
