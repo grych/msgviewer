@@ -42,7 +42,7 @@ class MsgsController < ApplicationController
       'application/octet-stream'
     end
     # render body: @attachment.data.read, content_type: content_type
-    send_data @attachment.data, type: content_type, filename: @attachment.filename
+    send_data @attachment.data.read, type: content_type, filename: @attachment.filename
   end
 
   private
