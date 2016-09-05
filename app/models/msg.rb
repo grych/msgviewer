@@ -50,6 +50,7 @@ class Msg < ActiveRecord::Base
   def html
     @html ||= body.parts.find{|x| x.content_type=="text/html"}.body if body
   end
+  
   def text
     @text ||= mime.parts.find {|x| x.content_type=="text/plain"}.try(:body)
   end
